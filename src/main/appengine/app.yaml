@@ -1,0 +1,16 @@
+runtime: custom
+env: flex
+api_version: 1
+
+handlers:
+  - url: .*
+    script: dynamic
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: 'prod'
+
+resources:
+  cpu: 1
+  memory_gb: 2
+
+
