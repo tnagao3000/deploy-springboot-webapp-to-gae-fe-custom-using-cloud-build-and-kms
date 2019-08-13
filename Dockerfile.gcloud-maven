@@ -1,0 +1,5 @@
+FROM gcr.io/cloud-builders/gcloud
+
+RUN apt-get update && apt-get install openjdk-8-jdk -y && apt install maven -y
+
+ENTRYPOINT []
