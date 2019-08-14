@@ -13,7 +13,7 @@
 
 - [(1) 素のSpringBoot](https://github.com/tnagao3000/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms/tree/springboot-webapp)
 - [(2) (1)をGAE/FEにデプロイ](https://github.com/tnagao3000/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms/tree/deploy-springboot-webapp-to-gae-fe-custom)
-- [(3) (2)を Cloud Build で実行](https://github.com/tnagao3000/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms/tree/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build)
+- **[(3) (2)を Cloud Build で実行](https://github.com/tnagao3000/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms/tree/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build)**
 - [(4) (3)に合わせて機密データも渡す](https://github.com/tnagao3000/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms/tree/deploy-springboot-webapp-to-gae-fe-custom-using-cloud-build-and-kms)
 
 
