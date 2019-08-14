@@ -1,13 +1,27 @@
 
 steps:
 #--------------------------------------------------------------------------------
-# (1/2) build と deploy に使うカスタムイメージを作成 (Including gcloud, jdk, maven)
+# (1/3) build と deploy に使うカスタムイメージを作成 (Including gcloud, jdk, maven)
 #--------------------------------------------------------------------------------
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/gcloud-maven', '-f', 'Dockerfile.gcloud-maven', '.']
 
 #--------------------------------------------------------------------------------
-# (2/2) カスタムイメージで build と deploy を行う
+# (2/3) application-prod.yml を復号
+#--------------------------------------------------------------------------------
+- name: 'gcr.io/$PROJECT_ID/gcloud-maven'
+  args:
+  - gcloud
+  - kms
+  - decrypt
+  - --ciphertext-file=src/main/resources/application-prod.yml.enc
+  - --plaintext-file=src/main/resources/application-prod.yml
+  - --location=global
+  - --keyring=wai-no-keyring
+  - --key=wai-no-key
+
+#--------------------------------------------------------------------------------
+# (3/3) カスタムイメージで build と deploy を行う
 #--------------------------------------------------------------------------------
 - name: 'gcr.io/$PROJECT_ID/gcloud-maven'
   args: ['mvn', 'clean', 'package', 'appengine:deploy']
