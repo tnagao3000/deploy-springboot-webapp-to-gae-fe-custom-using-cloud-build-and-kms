@@ -1,4 +1,4 @@
-これはSpringBootアプリを Cloud Build で GAE/GE にデプロイするデモです。
+これはSpringBootアプリを Cloud Build を使って GAE/FE にデプロイするデモです。
 
 次の記事を参照してください。
 
